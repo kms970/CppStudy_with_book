@@ -1,14 +1,16 @@
 #include<iostream>
+#include"Employee.h"
 
-int main()
-{
-	enum class PieceType
+using namespace std;
+
+namespace Records {
+	Employee::Employee(
+		const std::string& firstName,
+		const std::string& lastName)
+		:mFirstName(firstName), mLastName(lastName) {}
+
+	void Employee::promote(int raiseAmount)
 	{
-		King = 1,
-		Queen,
-		Rook=10,
-		Pawn
-	};
-
-	std::cout << static_cast<int>(PieceType::Pawn) << std::endl;
+		setSalary(getSalary() + raiseAmount);
+	}
 }

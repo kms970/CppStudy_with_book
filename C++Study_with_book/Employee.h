@@ -13,7 +13,7 @@ namespace Records {
 		void demote(int demeritAmount = 1000);
 		void hire();
 		void fire();
-		void display() const;
+		void display() const; //const 타입을 붙이면 부를수있는것은 같은 const타입
 
 		void setFirstName(const std::string& firstName);
 		const std::string& getFirstName() const;
